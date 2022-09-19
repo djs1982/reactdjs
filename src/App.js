@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+import BoxForChildren from './components/BoxForChildren';
+import NavBar from './components/NavBar';
+import Saludo from './components/saludo';
 
 function App() {
+  const styles ={
+    border: 'solid 3px blue'
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <NavBar></NavBar>
+    {/* //<div>
+    //   <h1>
+    //     "Hola Mundo"
+    //   </h1>
+    //   <BoxForChildren>
+    //     <p> Donde va???</p>
+    //   </BoxForChildren>
+    //   <h2 style={styles} className='back'>
+    //     " Como estan?"
+    //   </h2>
+
+    //   <Saludo name='Damian' age={40}></Saludo>
+    //   <Saludo name='Pablo' age={41}></Saludo>
+    //   <Saludo name='Maria' age={23}></Saludo>
+    // </div> */}
+    </>
   );
 }
 
