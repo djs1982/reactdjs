@@ -1,8 +1,10 @@
 
 import './App.css';
-import BoxForChildren from './components/BoxForChildren';
 import NavBar from './components/NavBar';
-import Saludo from './components/saludo';
+import Clicker from './components/Clicker';
+import ItemListContainer from './components/ItemListContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
   const styles ={
@@ -11,7 +13,18 @@ function App() {
 
   return (
     <>
+    <BrowserRouter>
     <NavBar></NavBar>
+    <Routes>
+      <Route path={'/'} element={<ItemListContainer/>}/>
+      <Route path={'/category'} element={<ItemListContainer/>}/>
+      <Route path={'/category/item/1'} element={<ItemDetailContainer/>}/>
+    </Routes>
+    </BrowserRouter>
+    
+    
+    
+
     {/* //<div>
     //   <h1>
     //     "Hola Mundo"

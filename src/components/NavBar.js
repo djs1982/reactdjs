@@ -1,10 +1,13 @@
 import CartWidge from "./CartWidge"
-
+import { Link } from 'react-router-dom'
 const NavBar = () => {
   return (
     <div className="navbar bg-base-300">
     <div className="flex-1">
-      <a className="btn btn-ghost normal-case text-xl">MULTISHOP</a>
+      <Link to = '/' className="btn btn-ghost normal-case text-xl">HOME</Link>
+    </div>
+    <div className="flex-1">
+      <Link to = '/category' className="btn btn-ghost normal-case text-xl">JUGUETES</Link>
     </div>
     <div className="flex-none">
       <CartWidge/>
